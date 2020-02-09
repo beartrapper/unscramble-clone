@@ -340,6 +340,7 @@ ol {
 .header nav ul {
   display: flex;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
 }
 
 .header nav li a {
