@@ -165,104 +165,33 @@ const Filter = e => {
   return (
     <>
       <div>
-        <div class="header ">
-          {width >= 768 ? (
-            <nav>
-              <div className="logo mb_5">
-                {/* <h1> */}
-                <img
-                  src="https://res.cloudinary.com/dflpfmync/image/upload/v1581128509/f8310367-dcec-48e9-a556-c8743923f5d0_200x200_kvaabg.png"
-                  alt="0584d0e9-f309-4a61-a490-c137282db299-200x200"
-                  border="0"
-                  width="80em"
-                  height="80em"
-                />
-                {/* </h1> */}
-              </div>
-              <ul>
-                <Link to="/unscramble">
-                  <li className="text-decor">
-                    <a href="#">Unscrambler</a>
-                  </li>
+      <div class="header ">
+        <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+    <Link to="/unscramble">
+    <li class="pure-menu-item pure-menu-selected">
+      <a href="#" class="pure-menu-link">Unscrambler</a></li>
+      </Link>
+      <Link to="/wwf">
+        <li class="pure-menu-item pure-menu-selected">
+          <a href="#" class="pure-menu-link">WWF Cheat</a></li>
+          </Link>
+          
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a href="#" id="menuLink1" class="pure-menu-link">List</a>
+            <ul class="pure-menu-children">
+            <Link to="/start">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Words that start with</a></li>
                 </Link>
-                <Link to="/wwf">
-                  <li>
-                    <a href="#">WWF Cheat</a>
-                  </li>
+                <Link to="/end">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Words that end with</a></li>
+                </Link>  <Link to="/length">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Words by length</a></li>
                 </Link>
-                <li>
-                  <a href="#">
-                    <div className="w3-container pb-5">
-                      <div class="w3-dropdown-hover">
-                        <button className="nnoe">Words List</button>
-                        <div class="w3-dropdown-content w3-bar-block ">
-                          <Link to="/start">
-                            <a href="#" class="w3-bar-item w3-button">
-                              Words that start with
-                          </a>
-                          </Link>
-                          <Link to="/end">
-                            <a href="#" class="w3-bar-item w3-button">
-                              Words ending in
-                          </a>
-                          </Link>
-                          <Link to="/length">
-                            <a href="#" class="w3-bar-item w3-button">
-                              Words by length
-                          </a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          ) : (
-              <>
-                <nav>
-                  <ul>
-                    <Link to="/unscramble">
-                      <li className="text-decor">
-                        <a href="#">Unscrambler</a>
-                      </li>
-                    </Link>
-                    <Link to="/wwf">
-                      <li>
-                        <a href="#">WWF Cheat</a>
-                      </li>
-                    </Link>
-                    <li>
-                      <a href="#">
-                        <div className="w3-container pb-5">
-                          <div class="w3-dropdown-hover">
-                            <button className="nnoe">Words List</button>
-                            <div class="w3-dropdown-content w3-bar-block ">
-                              <Link to="/start">
-                                <a href="#" class="w3-bar-item w3-button">
-                                  Words that start with
-                          </a>
-                              </Link>
-                              <Link to="/end">
-                                <a href="#" class="w3-bar-item w3-button">
-                                  Words ending in
-                          </a>
-                              </Link>
-                              <Link to="/length">
-                                <a href="#" class="w3-bar-item w3-button">
-                                  Words by length
-                          </a>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </>
-            )}
-
+            </ul>
+        </li>
+    </ul>
+</div>
           {/* <Animated
             animationIn="fadeInLeft"
             animationOut="fadeOut"

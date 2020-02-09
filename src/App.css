@@ -3,6 +3,43 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 
+
+/* ios nav */
+
+.uul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fafafa;
+
+  
+}
+
+.z-in {
+  z-index: 5;
+
+}
+
+
+.lli {
+  float: left;
+  
+}
+
+.lli a {
+  display: block;
+  color: gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.lli a:hover {
+  background-color: #b4b4b4;
+}     
+
+
 .fieldset {
   margin: 0;
   padding: 0;
@@ -300,19 +337,18 @@ ol {
     cover;
 }
 
-.header nav {
+.header .navv {
   background-color: #fafafa;
   height: 75px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  
   justify-content: space-around;
   border-bottom: 1px grey solid;
 }
 
-.header nav .logo {
+.header .navv .logo {
   color: #fff;
   text-transform: uppercase;
 
@@ -332,18 +368,18 @@ ol {
   /* padding-bottom: 4rem; */
 }
 
-.header nav .logo a {
+.header .navv .logo a {
   color: black;
   /* padding-bottom: 12rem; */
 }
 
-.header nav ul {
+.header .navv ul {
   display: flex;
   flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
+  /* -webkit-flex-wrap: wrap; */
 }
 
-.header nav li a {
+.header .navv li a {
   color: grey;
   display: block;
   position: relative;
@@ -351,11 +387,11 @@ ol {
   padding-bottom: 4rem;
 }
 
-.header nav li a:before,
-.header nav li a:after {
+.header .navv li a:before,
+.header .navv li a:after {
   content: "";
   width: 0px;
-  height: 2px;
+  height: 10px;
   display: block;
   position: absolute;
   background-color: #fff;
@@ -363,45 +399,15 @@ ol {
   transition: all 0.3s ease-in-out;
 }
 
-/* .header nav li a:before {
-  right: 50%;
-}
-.header nav li a:after {
-  left: 50%;
-}
-
-.header nav li a:hover:before,
-.header nav li a:hover:after {
-  width: 50%;
-} */
-
-/* @keyframes grow {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  50% {
-    transform: scale(1.6) rotate(10deg);
-  }
-}
-
-@-webkit-keyframes grow {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  50% {
-    transform: scale(1.6) rotate(10deg);
-  }
-} */
-
 .text-decor a {
   text-decoration: none;
 }
 
 @media only screen and (max-width: 290px) {
-  .header nav ul {
+  .header .navv ul {
     width: 100%;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
     /* text-decoration: none; */
   }
  
@@ -1224,7 +1230,11 @@ table.dataTable {
   color: #6185aa;
 }
 
-@media only screen and (max-width: 700px){
-  .input {
-  }
-  }
+.pure-menu {
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #fafafa;
+  border-bottom: 1px solid gray;
+}
+
+
