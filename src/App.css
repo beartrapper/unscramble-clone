@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 
 .fieldset {
@@ -243,7 +244,7 @@
 }
 
 /* navbar */
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+
 
 /* body, */
 html {
@@ -255,17 +256,25 @@ a,
 ol {
   list-style: none;
   border-bottom-style: none;
+  -webkit-list-style: none;
+-webkit-border-bottom-style: none;
 }
 
 
 
 .header {
+
   width: 100vw;
   height: 100vh;
   display: flex;
   position: relative;
   /* align-items: center; */
   flex-direction: column;
+  /* -webkit-width: 100vw;
+  -webkit-hieght: 100vh;
+  -webkit-display: flex;
+  -webkit-position: relative;
+  -webkit-flex-direction: column; */
 }
 
 .header:before {
@@ -293,11 +302,12 @@ ol {
 
 .header nav {
   background-color: #fafafa;
-  height: 5rem;
+  height: 75px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  
   justify-content: space-around;
   border-bottom: 1px grey solid;
 }
@@ -393,6 +403,7 @@ ol {
     flex-direction: column;
     /* text-decoration: none; */
   }
+ 
 }
 
 /* button */
