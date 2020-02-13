@@ -11,6 +11,8 @@ import Length from "./Components/Routes/ByLength/ByLength";
 import LetterNav from "./Components/Routes/Letter/LetterNav";
 import LetterEndNav from "./Components/Routes/Letter/LetterEndNav";
 import LetterWords from "./Components/Routes/Letter/LetterWords";
+import About from "./Components/About/About";
+import Contact from "./Components/Contact Us/Contact";
 
 class App extends React.Component {
   render() {
@@ -27,6 +29,9 @@ class App extends React.Component {
             <Route path="/letternav" component={LetterNav} />
             <Route path="/letternavend" component={LetterEndNav} />
             <Route path="/letterwords" component={LetterWords} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+
           </Switch>
         </Router>
       </>

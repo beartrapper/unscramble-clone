@@ -237,41 +237,62 @@ const Search = () => {
  
         <div className="header">
     
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav navbar-fixed-top">
+        <div class="container-fluid">
+  <a class="navbar-brand" href="#">Scrabbler</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-       <div class="pure-menu pure-menu-horizontal">
-    <ul class="pure-menu-list">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
     <Link to="/unscramble">
-    <li class="pure-menu-item pure-menu-selected">
-      <a href="#" class="pure-menu-link">Unscrambler</a></li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Unscrambler</a>
+      </li>
       </Link>
       <Link to="/wwf">
-        <li class="pure-menu-item pure-menu-selected">
-          <a href="#" class="pure-menu-link">WWF Cheat</a></li>
-          </Link>
-          
-        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-            <a href="#" id="menuLink1" class="pure-menu-link">List</a>
-            <ul class="pure-menu-children">
-            <Link to="/start">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Words that start with</a></li>
-                </Link>
-                <Link to="/end">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Words that end with</a></li>
-                </Link>  <Link to="/length">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Words by length</a></li>
-                </Link>
-            </ul>
-        </li>
-    </ul>
-</div>
 
+      <li class="nav-item">
+        <a class="nav-link" href="#">WWF</a>
+      </li>
+      </Link>
+      <li>
+      <div class="dropdown">
+  <button class="dropbtn">Words List</button>
+  <div class="dropdown-content">
+  <Link to="/start">
+
+<a class="dropdown-item" href="#">Words starting with</a>
+</Link>
+<Link to="/end">
+
+<a class="dropdown-item" href="#">Words that end with</a>
+</Link>
+<Link to="/length">
+
+<a class="dropdown-item" href="#">Words by length</a>
+</Link>
+  </div>
+</div>
+      </li>
+     
+    
+    </ul>
+
+  </div>
+  </div>
+</nav>
+    
+
+       
 
           <div className="s006">
             <form onSubmit={e => {e.preventDefault();onClicked(e)}}>
               <fieldset className="fieldset">
                 <legend className="legend">
-                  <h1 class="tmp">Your Letters..</h1>
-                  <h3 class="tmp2">My Words!</h3>
+                  <h1 class="tmp">Your Letters.. My Words!</h1>
                 </legend>
                 <div className="inner-form">
                   <div className="input-field">
@@ -291,7 +312,7 @@ const Search = () => {
                       onChange={handleInput}
                       id="search"
                       type="text"
-                      placeholder="Type here"
+                      placeholder="Type here.."
                       style={{
                         border: err ? "5px solid #d80b0b" : "5px solid #005a9c"
                       }}
@@ -299,9 +320,7 @@ const Search = () => {
                   </div>
                 </div>
            
-                <div className="suggestion-wrap">
-                
-                </div>
+              
 {clickedTrue  ?  <>
   <input className="input" placeholder="Starts with" type="text" />
   
@@ -315,26 +334,29 @@ const Search = () => {
 
   
 
-                <div class="button" onClick={Filter}>
+              
                   {clickedTrue ? <>
-                    <span class="button__mask"></span>
-                  <span class="button__text">
-                    &nbsp; Hide
-                  </span>
-                  <span class="button__text button__text--bis">
-                    &nbsp; Hide
-                  </span></> :<>
+                    <div class="button search-btn-class" onClick={Filter}>
+                    <div className="btn btn-lg">Hide</div>
+                  </div>
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  <div class="button mr-3 search-btn-class">
+                 <div className="btn btn-lg">Search</div>
+                  </div>  </>:
+                  <div class="button" onClick={Filter}>
                   <span class="button__mask"></span>
                   <span class="button__text">
                     <FontAwesomeIcon icon={faFilter} />
-                    &nbsp; Filter
+                    &nbsp; Advanced
                   </span>
                   <span class="button__text button__text--bis">
                     <FontAwesomeIcon icon={faFilter} />
-                    &nbsp; Filter
-                  </span></>}
+                    &nbsp; Advanced
+                  </span></div>}
                  
-                </div>
+                
               </fieldset>
             </form>
           </div>
@@ -346,13 +368,12 @@ const Search = () => {
           <div class="row py-5">
             <div class="col-12">
               <table id="example" class="table table-hover responsive nowrap">
-                <thead>
+                <thead class="background-thead">
                   <tr>
                     <th>Words</th>
                     <th>Scrabble</th>
                     <th>Words With Friends</th>
 
-                    <th>save!</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -368,52 +389,14 @@ const Search = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
                             </td>
                             <td>{assignNumber(item)}</td>
                             <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btnn btn-sm btn-icon"
-                                  type="button"
-                                  id="dropdownMenuButton2"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i
-                                    class="bx bx-dots-horizontal-rounded"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Actions"
-                                  ></i>
-                                </button>
-                                <div
-                                  class="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton2"
-                                >
-                                  <a class="dropdown-item" href="#">
-                                    <i class="bx bxs-pencil mr-2"></i> Edit
-                                    Profile
-                                  </a>
-                                  <a class="dropdown-item text-danger" href="#">
-                                    <i class="bx bxs-trash mr-2"></i> Remove
-                                  </a>
-                                </div>
-                              </div>
-                            </td>
+                           
+                         
                           </tr>
                         </>
                       );
@@ -440,14 +423,7 @@ const Search = () => {
                             </td>
                             <td>{assignNumber(item)}</td>
                             <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
+                           
                             <td>
                               <div class="dropdown">
                                 <button
@@ -505,14 +481,7 @@ const Search = () => {
                             </td>
                             <td>{assignNumber(item)}</td>
                             <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
+                           
                             <td>
                               <div class="dropdown">
                                 <button
@@ -570,14 +539,7 @@ const Search = () => {
                             </td>
                             <td>{assignNumber(item)}</td>
                             <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
+                           
                             <td>
                               <div class="dropdown">
                                 <button
@@ -635,14 +597,7 @@ const Search = () => {
                             </td>
                             <td>{assignNumber(item)}</td>
                             <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
+                           
                             <td>
                               <div class="dropdown">
                                 <button
@@ -700,14 +655,7 @@ const Search = () => {
                             </td>
                             <td>{assignNumber(item)}</td>
                             <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
+                           
                             <td>
                               <div class="dropdown">
                                 <button
@@ -765,14 +713,7 @@ const Search = () => {
                             </td>
                             <td>{assignNumber(item)}</td>
                             <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
+                           
                             <td>
                               <div class="dropdown">
                                 <button
@@ -830,14 +771,7 @@ const Search = () => {
                             </td>
                             <td>{assignNumber(item)}</td>
                             <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
+                           
                             <td>
                               <div class="dropdown">
                                 <button
@@ -896,14 +830,7 @@ const Search = () => {
                             </td>
                             <td>{assignNumber(item)}</td>
                             <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
+                           
                             <td>
                               <div class="dropdown">
                                 <button

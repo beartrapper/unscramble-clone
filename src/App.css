@@ -6,11 +6,15 @@
 
 /* ios nav */
 
+/* * {
+  overflow-x: hidden;
+} */
+
 .uul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #fafafa;
 
   
@@ -40,6 +44,15 @@
 }     
 
 
+.header {
+  overflow: hidden;
+}
+
+
+.pure-menu {
+  position: fixed;
+}
+
 .fieldset {
   margin: 0;
   padding: 0;
@@ -50,6 +63,7 @@
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
   border: 0;
+  padding-bottom: 30vh;
 }
 
 .w3-dropdown-hover {
@@ -111,7 +125,7 @@
   font-family: "Poppins", sans-serif;
   background-position: center center;
   padding: 15px;
-  padding-bottom: 15rem;
+  /* padding-bottom: 15rem; */
 }
 
 .s006 form {
@@ -143,10 +157,11 @@
   width: 100%;
   background: transparent;
   /* border: black; */
+  margin-left: 13vw;
   background: #fff;
   display: block;
   width: 100%;
-  padding: 10px 32px 10px 70px;
+  padding: 10px 32px 20px 70px;
   font-size: 18px;
   color: #666;
   border-radius: 34px;
@@ -157,6 +172,7 @@
   font-size: 18px;
 }
 
+    /* color: #ccc; */
 .s006 form .inner-form .input-field input:-moz-placeholder {
   color: #ccc;
   font-size: 18px;
@@ -164,7 +180,7 @@
 
 .s006 form .inner-form .input-field input::-webkit-input-placeholder {
   color: #ccc;
-  font-size: 18px;
+  font-size: 0.8em;
 }
 
 .s006 form .inner-form .input-field input:hover,
@@ -182,7 +198,7 @@
   position: absolute;
   left: 0;
   height: 100%;
-  background: transparent;
+  background: rgb(192, 189, 189);
   border: 0;
   padding: 0;
   cursor: pointer;
@@ -190,6 +206,10 @@
   -ms-flex-pack: center;
   justify-content: center;
   align-items: center;
+}
+
+.btn-search {
+  border-radius: 0px 30px 30px 0px;
 }
 
 .s006 form .inner-form .input-field .btn-search svg {
@@ -204,7 +224,7 @@
 
 .btn-search {
   float: right;
-  margin-left: 720px;
+  margin-left: 520px;
   /* margin: 10px; */
   /* background-color: brown; */
 }
@@ -215,12 +235,16 @@
   box-shadow: none;
 }
 
+.btn-search:hover {
+  background-color: rgb(49, 48, 48);
+}
+
 .s006 form .inner-form .input-field .btn-search:hover svg,
 .s006 form .inner-form .input-field .btn-search:focus svg {
   fill: #666;
   border-radius: 20px;
   border-radius: solid black;
-  background-color: #31c2b8;
+  /* background-color: #31c2b8; */
   padding: 10px;
 }
 
@@ -241,6 +265,12 @@
   margin-bottom: 10px;
 }
 
+#search {
+  max-width: 30vw;
+  padding-left: 1.5vw;
+  /* text-align: left; */
+}
+
 @media screen and (max-width: 767px) {
   .s006 form .inner-form .input-field {
     margin-bottom: 20px;
@@ -253,10 +283,13 @@
   .s006 form .inner-form .input-field .btn-search svg {
     width: 18px;
     height: 26px;
+    
   }
 
   .btn-search {
-    margin-left: 280px;
+    margin-left: 290px;
+    max-width: 60px;
+    /* border-radius: 0 35px 25px 0; */
     /* float: right; */
     /* margin-right: 700px; */
     /* margin: 10px; */
@@ -274,10 +307,23 @@
   .s006 {
     padding-top: 10rem;
   }
+
+  #search {
+    border: 5px solid #005a9c;
+    font-size: 0.8em;
+    /* max-width: 20vw; */
+    
+  }
+
+  .s006 form .inner-form .input-field input::-webkit-input-placeholder {
+    font-size: 0.7em;
+    padding-bottom: 1em;
+  }
 }
 
 #search {
   border: 5px solid #005a9c;
+  font-size: 2.2em;
 }
 
 /* navbar */
@@ -433,7 +479,8 @@ ol {
   cursor: pointer;
   overflow: hidden;
   opacity: 0.6;
-  color: #005a9c;
+  text-align: center;
+  margin-right:24vw;
   /* margin-top: -10rem; */
 }
 .button__text {
@@ -513,12 +560,11 @@ ol {
 }
 
 @media screen and (max-width: 767px) {
-  .button {
+  /* .button {
     margin-bottom: 12rem;
     margin-top: -8rem;
 
-    /* padding-bottom: ; */
-  }
+  } */
 
   .button__text {
     padding: 0.3em 1em;
@@ -579,12 +625,12 @@ footer ul {
 }
 
 .centered {
-  padding-left: 25vw;
+  padding-left: 30vw;
   color: #fff;
 }
 
 .centeredd {
-  padding-left: 30vw;
+  padding-left: 35vw;
   color: #fff;
 }
 .hoverred:hover {
@@ -598,8 +644,10 @@ footer ul {
   }
   .centeredd {
     font-size: 1rem;
-    padding-left: 20vw;
+    padding-left: 25vw;
   }
+
+  
 }
 /* Footer Top */
 .footer-top {
@@ -1223,7 +1271,8 @@ table.dataTable {
   border-radius: 5px 0px 5px 0px;
   -webkit-transition: 0.1s ease-in-out;
   margin: 5px;
-  border-radius: 25px;
+  /* border-radius: 25px; */
+  max-width: 13vw;
 }
 .input:focus{
   border-color: #3498db;
@@ -1238,3 +1287,78 @@ table.dataTable {
 }
 
 
+
+@media only screen and (max-width: 700px) {
+  .input {
+    max-width: 27vw;
+  }
+
+  .search-btn-class {
+    /* padding-left:40px; */
+    margin-right: 23vw;
+    margin-top: 2vh;
+  }
+  .button {
+  
+  }
+}
+
+
+.navbar-collapse.in {
+  display: block !important;
+}
+
+.bottom-border-nav {
+  border-bottom: 1px solid black;
+}
+
+.margin-right {
+  margin-right: 12vw;
+}
+
+
+.dropbtn {
+  background-color: #F8F9FA;
+  color: gray;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  margin-right: 5em;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+.nav-fixedd {
+  position: sticky;
+  top: 0;
+}
+
+.background-thead {
+  background-color: rgb(46, 45, 45);
+  color: white
+}

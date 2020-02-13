@@ -212,32 +212,51 @@ const UnscrambleSearch = () => {
       <div>
         
         <div class="header ">
-        <div class="pure-menu pure-menu-horizontal">
-    <ul class="pure-menu-list">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav">
+  <a class="navbar-brand" href="#">Scrabbler</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
     <Link to="/unscramble">
-    <li class="pure-menu-item pure-menu-selected">
-      <a href="#" class="pure-menu-link">Unscrambler</a></li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Unscrambler</a>
+      </li>
       </Link>
       <Link to="/wwf">
-        <li class="pure-menu-item pure-menu-selected">
-          <a href="#" class="pure-menu-link">WWF Cheat</a></li>
-          </Link>
-          
-        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-            <a href="#" id="menuLink1" class="pure-menu-link">List</a>
-            <ul class="pure-menu-children">
-            <Link to="/start">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Words that start with</a></li>
-                </Link>
-                <Link to="/end">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Words that end with</a></li>
-                </Link>  <Link to="/length">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Words by length</a></li>
-                </Link>
-            </ul>
-        </li>
-    </ul>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">WWF</a>
+      </li>
+      </Link>
+      <li>
+      <div class="dropdown">
+  <button class="dropbtn">Words List</button>
+  <div class="dropdown-content">
+  <Link to="/start">
+
+<a class="dropdown-item" href="#">Words starting with</a>
+</Link>
+<Link to="/end">
+
+<a class="dropdown-item" href="#">Words that end with</a>
+</Link>
+<Link to="/length">
+
+<a class="dropdown-item" href="#">Words by length</a>
+</Link>
+  </div>
 </div>
+      </li>
+     
+    
+    </ul>
+
+  </div>
+</nav>
 
 
           <div className="s006">
@@ -294,27 +313,26 @@ const UnscrambleSearch = () => {
 
 
   <input className="input" placeholder="Ends In" type="text" /> </>:<></>}
-
-  <div class="button" onClick={Filter}>
-                  {clickedTrue ? <>
-                    <span class="button__mask"></span>
-                  <span class="button__text">
-                    &nbsp; Hide
-                  </span>
-                  <span class="button__text button__text--bis">
-                    &nbsp; Hide
-                  </span></> :<>
+  {clickedTrue ? <>
+                    <div class="button search-btn-class" onClick={Filter}>
+                    <div className="btn btn-lg">Hide</div>
+                  </div>
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  <div class="button mr-3 search-btn-class">
+                 <div className="btn btn-lg">Search</div>
+                  </div>  </>:
+                  <div class="button" onClick={Filter}>
                   <span class="button__mask"></span>
                   <span class="button__text">
                     <FontAwesomeIcon icon={faFilter} />
-                    &nbsp; Filter
+                    &nbsp; Advanced
                   </span>
                   <span class="button__text button__text--bis">
                     <FontAwesomeIcon icon={faFilter} />
-                    &nbsp; Filter
-                  </span></>}
-                 
-                </div>
+                    &nbsp; Advanced
+                  </span></div>}
               </fieldset>
             </form>
           </div>

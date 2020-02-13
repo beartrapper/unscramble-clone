@@ -14,10 +14,14 @@ const Footer = () => {
 
           <div className="row centered centeredd">
                 <div className="">
+                  <Link to="/contact">
                   <a className="hoverred">Contact Us</a>
+                  </Link>
               </div>
               <div className="pl-5">
+                <Link to="/about">
                   <a>About Us</a>
+                  </Link>
               </div>
             </div>
         <hr />
