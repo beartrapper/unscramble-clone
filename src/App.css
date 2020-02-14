@@ -125,6 +125,8 @@
   font-family: "Poppins", sans-serif;
   background-position: center center;
   padding: 15px;
+  overflow: hidden;
+  /* background-color: rgb(247, 244, 244); */
   /* padding-bottom: 15rem; */
 }
 
@@ -274,26 +276,34 @@
 @media screen and (max-width: 767px) {
   .s006 form .inner-form .input-field {
     margin-bottom: 20px;
-    height: 50px;
+    height: 60px;
+    max-width: 80vw;
+    font-size:0.8em;
+    
+    /* padding-right:10vw; */
+
   }
+
+
+
+  .input-field {
+    padding-right: 15vw;
+  }
+
   .s006 form .inner-form .input-field input {
     padding-left: 55px;
-    font-size: 16px;
+    font-size: 5px;
   }
   .s006 form .inner-form .input-field .btn-search svg {
     width: 18px;
     height: 26px;
-    
+    /* margin-right: 10vw; */
   }
 
   .btn-search {
-    margin-left: 290px;
+    margin-left: 250px;
     max-width: 60px;
-    /* border-radius: 0 35px 25px 0; */
-    /* float: right; */
-    /* margin-right: 700px; */
-    /* margin: 10px; */
-    /* background-color: brown; */
+
   }
 
   .btn-search:hover {
@@ -311,13 +321,16 @@
   #search {
     border: 5px solid #005a9c;
     font-size: 0.8em;
-    /* max-width: 20vw; */
+    max-width: 80vw;
+    /* padding-right: 30vw; */
     
   }
 
   .s006 form .inner-form .input-field input::-webkit-input-placeholder {
     font-size: 0.7em;
     padding-bottom: 1em;
+    padding-left: 10px;
+
   }
 }
 
@@ -325,8 +338,6 @@
   border: 5px solid #005a9c;
   font-size: 2.2em;
 }
-
-/* navbar */
 
 
 /* body, */
@@ -369,11 +380,11 @@ ol {
   top: 0;
   left: 0;
   /* animation: grow 60s linear 0.5s infinite; */
-  background: url("./Rain-5s-1084px\ \(3\).svg") no-repeat fixed top center /
-    cover;
+  /* background: url("./Rain-5s-1084px\ \(3\).svg") no-repeat fixed top center /
+    cover; */
 }
 
-.headerr:before {
+/* .headerr:before {
   background: url("./Rain-5s-1084px\ \(3\).svg") no-repeat fixed top center /
     cover;
 }
@@ -381,7 +392,7 @@ ol {
 .headerrr:before {
   background: url("./Rain-5s-1084px\ \(3\).svg") no-repeat fixed top center /
     cover;
-}
+} */
 
 .header .navv {
   background-color: #fafafa;
@@ -467,8 +478,14 @@ ol {
   text-align: center;
 } */
 
+
+
+
+
+
+
 .button {
-  border-radius: 40px;
+  border-radius: 10px;
   float: right;
   text-align: center;
   touch-callout: none;
@@ -481,7 +498,17 @@ ol {
   opacity: 0.6;
   text-align: center;
   margin-right:24vw;
+  background-color: #fafafa;
   /* margin-top: -10rem; */
+}
+@media only screen and (max-width: 768){
+  
+  .button {
+
+    margin-right:28vw;
+
+ 
+  }
 }
 .button__text {
   display: block;
@@ -1058,7 +1085,9 @@ body {
 }
 
 .table td {
-  background: #fff;
+ 
+  /* text-align: center; */
+  background: rgb(240, 239, 239);
 }
 
 .table td:first-child {
@@ -1272,7 +1301,7 @@ table.dataTable {
   -webkit-transition: 0.1s ease-in-out;
   margin: 5px;
   /* border-radius: 25px; */
-  max-width: 13vw;
+  max-width: 30vw;
 }
 .input:focus{
   border-color: #3498db;
@@ -1361,4 +1390,60 @@ table.dataTable {
 .background-thead {
   background-color: rgb(46, 45, 45);
   color: white
+}
+
+/* .button-grey {
+  background-color: rgb(104, 104, 104);
+  color: black
+}
+
+.search-btn-class {
+  color: black
+} */
+
+@media only screen and (min-width:768){
+  .input {
+  background: #ecf0f1;
+  padding: 10px;
+  font-family: "Open Sans";
+  color: #7f8c8d;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 3px;
+  border-color: #777474;
+  outline: none;
+  border-radius: 5px 0px 5px 0px;
+  -webkit-transition: 0.1s ease-in-out;
+  margin: 5px;
+  /* border-radius: 25px; */
+  max-width: 13vw;
+}
+}
+
+
+@media only screen 
+and (min-device-width : 700px) 
+and (max-device-width : 760px) 
+ {
+  .input {
+    background: #ecf0f1;
+    padding-left: 20vw;
+    font-family: "Open Sans";
+    color: #7f8c8d;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-color: #777474;
+    outline: none;
+    border-radius: 5px 0px 5px 0px;
+    -webkit-transition: 0.1s ease-in-out;
+    margin: 5px;
+    /* border-radius: 25px; */
+    max-width: 13vw;
+  }
+
+  .input-field {
+    max-width:80vw;
+    padding-left: 80vw;
+  }
 }

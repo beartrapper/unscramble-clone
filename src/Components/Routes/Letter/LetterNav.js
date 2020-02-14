@@ -305,604 +305,276 @@ const Filter = e => {
       </div>
       {render ? (
        
-        <div class="container">
-          <div class="row py-5">
-            <div class="col-12">
-              <table id="example" class="table table-hover responsive nowrap">
-                <thead>
-                  <tr>
-                    <th>Words</th>
-                    <th>Scrabble</th>
-                    <th>Words With Friends</th>
+       <div class="container">
+         <div class="row py-5">
+           <div class="col-12">
+             <table id="example" class="table table-hover responsive nowrap">
+               <thead class="background-thead">
+                 <tr>
+                   <th>Words</th>
+                   <th>Scrabble</th>
+                   <th>Words With Friends</th>
 
-                    <th>save!</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {Array9.length != 0 ? (
-                    Array9.map(item => {
-                      return (
-                        <>
-                          <tr>
-                            <td>
-                              <a href="#">
-                                <div class="d-flex align-items-center">
-                                  <div class="avatar avatar-grey mr-3">10</div>
+                 </tr>
+               </thead>
+               <tbody>
+                 {Array9.length != 0 ? (
+                   Array9.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-grey mr-3">10</div>
 
-                                  <div class="">
-                                    <p class="font-weight-bold mb-0">{item}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                  </div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>{assignNumber(item)}</td>
-                            <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btnn btn-sm btn-icon"
-                                  type="button"
-                                  id="dropdownMenuButton2"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i
-                                    class="bx bx-dots-horizontal-rounded"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Actions"
-                                  ></i>
-                                </button>
-                                <div
-                                  class="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton2"
-                                >
-                                  <a class="dropdown-item" href="#">
-                                    <i class="bx bxs-pencil mr-2"></i> Edit
-                                    Profile
-                                  </a>
-                                  <a class="dropdown-item text-danger" href="#">
-                                    <i class="bx bxs-trash mr-2"></i> Remove
-                                  </a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </>
-                      );
-                    })
-                  ) : (
-                      <></>
-                    )}
-                  {Array8.length != 0 ? (
-                    Array8.map(item => {
-                      return (
-                        <>
-                          <tr>
-                            <td>
-                              <a href="#">
-                                <div class="d-flex align-items-center">
-                                  <div class="avatar avatar-pink mr-3">9</div>
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{assignNumber(item)}</td>
+                           <td>{assignNumber(item)}</td>
+                          
+                        
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {Array8.length != 0 ? (
+                   Array8.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-pink mr-3">9</div>
 
-                                  <div class="">
-                                    <p class="font-weight-bold mb-0">{item}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                  </div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>{assignNumber(item)}</td>
-                            <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btnn btn-sm btn-icon"
-                                  type="button"
-                                  id="dropdownMenuButton2"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i
-                                    class="bx bx-dots-horizontal-rounded"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Actions"
-                                  ></i>
-                                </button>
-                                <div
-                                  class="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton2"
-                                >
-                                  <a class="dropdown-item" href="#">
-                                    <i class="bx bxs-pencil mr-2"></i> Edit
-                                    Profile
-                                  </a>
-                                  <a class="dropdown-item text-danger" href="#">
-                                    <i class="bx bxs-trash mr-2"></i> Remove
-                                  </a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </>
-                      );
-                    })
-                  ) : (
-                      <></>
-                    )}
-                  {Array7.length != 0 ? (
-                    Array7.map(item => {
-                      return (
-                        <>
-                          <tr>
-                            <td>
-                              <a href="#">
-                                <div class="d-flex align-items-center">
-                                  <div class="avatar avatar-blue mr-3">8</div>
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item}</p>
+                                   {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{assignNumber(item)}</td>
+                           <td>{assignNumber(item)}</td>
+                          
+                           
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {Array7.length != 0 ? (
+                   Array7.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-blue mr-3">8</div>
 
-                                  <div class="">
-                                    <p class="font-weight-bold mb-0">{item}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                  </div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>{assignNumber(item)}</td>
-                            <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btnn btn-sm btn-icon"
-                                  type="button"
-                                  id="dropdownMenuButton2"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i
-                                    class="bx bx-dots-horizontal-rounded"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Actions"
-                                  ></i>
-                                </button>
-                                {/* <div
-                                  class="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton2"
-                                >
-                                  <a class="dropdown-item" href="#">
-                                    <i class="bx bxs-pencil mr-2"></i> Edit
-                                    Profile
-                                  </a>
-                                  <a class="dropdown-item text-danger" href="#">
-                                    <i class="bx bxs-trash mr-2"></i> Remove
-                                  </a>
-                                </div> */}
-                              </div>
-                            </td>
-                          </tr>
-                        </>
-                      );
-                    })
-                  ) : (
-                      <></>
-                    )}
-                  {Array6.length != 0 ? (
-                    Array6.map(item => {
-                      return (
-                        <>
-                          <tr>
-                            <td>
-                              <a href="#">
-                                <div class="d-flex align-items-center">
-                                  <div class="avatar avatar-red mr-3">7</div>
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item}</p>
+                                   {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{assignNumber(item)}</td>
+                           <td>{assignNumber(item)}</td>
+                          
+                         
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {Array6.length != 0 ? (
+                   Array6.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-red mr-3">7</div>
 
-                                  <div class="">
-                                    <p class="font-weight-bold mb-0">{item}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                  </div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>{assignNumber(item)}</td>
-                            <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btnn btn-sm btn-icon"
-                                  type="button"
-                                  id="dropdownMenuButton2"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i
-                                    class="bx bx-dots-horizontal-rounded"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Actions"
-                                  ></i>
-                                </button>
-                                <div
-                                  class="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton2"
-                                >
-                                  <a class="dropdown-item" href="#">
-                                    <i class="bx bxs-pencil mr-2"></i> Edit
-                                    Profile
-                                  </a>
-                                  <a class="dropdown-item text-danger" href="#">
-                                    <i class="bx bxs-trash mr-2"></i> Remove
-                                  </a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </>
-                      );
-                    })
-                  ) : (
-                      <></>
-                    )}
-                  {Array5.length != 0 ? (
-                    Array5.map(item => {
-                      return (
-                        <>
-                          <tr>
-                            <td>
-                              <a href="#">
-                                <div class="d-flex align-items-center">
-                                  <div class="avatar avatar-orange mr-3">6</div>
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item}</p>
+                                   {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{assignNumber(item)}</td>
+                           <td>{assignNumber(item)}</td>
+                       
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {Array5.length != 0 ? (
+                   Array5.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-orange mr-3">6</div>
 
-                                  <div class="">
-                                    <p class="font-weight-bold mb-0">{item}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                  </div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>{assignNumber(item)}</td>
-                            <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btnn btn-sm btn-icon"
-                                  type="button"
-                                  id="dropdownMenuButton2"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i
-                                    class="bx bx-dots-horizontal-rounded"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Actions"
-                                  ></i>
-                                </button>
-                                <div
-                                  class="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton2"
-                                >
-                                  <a class="dropdown-item" href="#">
-                                    <i class="bx bxs-pencil mr-2"></i> Edit
-                                    Profile
-                                  </a>
-                                  <a class="dropdown-item text-danger" href="#">
-                                    <i class="bx bxs-trash mr-2"></i> Remove
-                                  </a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </>
-                      );
-                    })
-                  ) : (
-                      <></>
-                    )}
-                  {Array4.length != 0 ? (
-                    Array4.map(item => {
-                      return (
-                        <>
-                          <tr>
-                            <td>
-                              <a href="#">
-                                <div class="d-flex align-items-center">
-                                  <div class="avatar avatar-grey mr-3">5</div>
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item}</p>
+                                   {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{assignNumber(item)}</td>
+                           <td>{assignNumber(item)}</td>
+                         
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {Array4.length != 0 ? (
+                   Array4.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-grey mr-3">5</div>
 
-                                  <div class="">
-                                    <p class="font-weight-bold mb-0">{item}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                  </div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>{assignNumber(item)}</td>
-                            <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btnn btn-sm btn-icon"
-                                  type="button"
-                                  id="dropdownMenuButton2"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i
-                                    class="bx bx-dots-horizontal-rounded"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Actions"
-                                  ></i>
-                                </button>
-                                <div
-                                  class="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton2"
-                                >
-                                  <a class="dropdown-item" href="#">
-                                    <i class="bx bxs-pencil mr-2"></i> Edit
-                                    Profile
-                                  </a>
-                                  <a class="dropdown-item text-danger" href="#">
-                                    <i class="bx bxs-trash mr-2"></i> Remove
-                                  </a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </>
-                      );
-                    })
-                  ) : (
-                      <></>
-                    )}
-                  {Array3.length != 0 ? (
-                    Array3.map(item => {
-                      return (
-                        <>
-                          <tr>
-                            <td>
-                              <a href="#">
-                                <div class="d-flex align-items-center">
-                                  <div class="avatar avatar-brown mr-3">4</div>
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item}</p>
+                                   {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{assignNumber(item)}</td>
+                           <td>{assignNumber(item)}</td>
+                          
+                       
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {Array3.length != 0 ? (
+                   Array3.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-brown mr-3">4</div>
 
-                                  <div class="">
-                                    <p class="font-weight-bold mb-0">{item}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                  </div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>{assignNumber(item)}</td>
-                            <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btnn btn-sm btn-icon"
-                                  type="button"
-                                  id="dropdownMenuButton2"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i
-                                    class="bx bx-dots-horizontal-rounded"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Actions"
-                                  ></i>
-                                </button>
-                                <div
-                                  class="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton2"
-                                >
-                                  <a class="dropdown-item" href="#">
-                                    <i class="bx bxs-pencil mr-2"></i> Edit
-                                    Profile
-                                  </a>
-                                  <a class="dropdown-item text-danger" href="#">
-                                    <i class="bx bxs-trash mr-2"></i> Remove
-                                  </a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </>
-                      );
-                    })
-                  ) : (
-                      <></>
-                    )}
-                  {Array2.length != 0 ? (
-                    Array2.map(item => {
-                      return (
-                        <>
-                          <tr>
-                            <td>
-                              <a href="#">
-                                <div class="d-flex align-items-center">
-                                  <div class="avatar avatar-pink mr-3">3</div>
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item}</p>
+                                   {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{assignNumber(item)}</td>
+                           <td>{assignNumber(item)}</td>
+                          
+                     
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {Array2.length != 0 ? (
+                   Array2.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-pink mr-3">3</div>
 
-                                  <div class="">
-                                    <p class="font-weight-bold mb-0">{item}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                  </div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>{assignNumber(item)}</td>
-                            <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btnn btn-sm btn-icon"
-                                  type="button"
-                                  id="dropdownMenuButton2"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i
-                                    class="bx bx-dots-horizontal-rounded"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Actions"
-                                  ></i>
-                                </button>
-                                <div
-                                  class="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton2"
-                                >
-                                  <a class="dropdown-item" href="#">
-                                    <i class="bx bxs-pencil mr-2"></i> Edit
-                                    Profile
-                                  </a>
-                                  <a class="dropdown-item text-danger" href="#">
-                                    <i class="bx bxs-trash mr-2"></i> Remove
-                                  </a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </>
-                      );
-                    })
-                  ) : (
-                      <></>
-                    )}
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item}</p>
+                                   {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{assignNumber(item)}</td>
+                           <td>{assignNumber(item)}</td>
+                   
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
 
-                  {Array1.length != 0 ? (
-                    Array1.map(item => {
-                      return (
-                        <>
-                          <tr>
-                            <td>
-                              <a href="#">
-                                <div class="d-flex align-items-center">
-                                  <div class="avatar avatar-blue mr-3">2</div>
+                 {Array1.length != 0 ? (
+                   Array1.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-blue mr-3">2</div>
 
-                                  <div class="">
-                                    <p class="font-weight-bold mb-0">{item}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                  </div>
-                                </div>
-                              </a>
-                            </td>
-                            <td>{assignNumber(item)}</td>
-                            <td>{assignNumber(item)}</td>
-                            <td>
-                              <button className="btn btn-sm btn-primary">
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  color="maroon"
-                                />
-                              </button>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btnn btn-sm btn-icon"
-                                  type="button"
-                                  id="dropdownMenuButton2"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i
-                                    class="bx bx-dots-horizontal-rounded"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Actions"
-                                  ></i>
-                                </button>
-                            
-                              </div>
-                            </td>
-                          </tr>
-                        </>
-                      );
-                    })
-                  ) : (
-                      <></>
-                    )}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      ) : (
-          <></>
-        )}
-
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item}</p>
+                                   {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{assignNumber(item)}</td>
+                           <td>{assignNumber(item)}</td>
+                          
+                   
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+               </tbody>
+             </table>
+           </div>
+         </div>
+       </div>
+     ) : (
+         <></>
+       )}
       <Footer />
     </>
   );
