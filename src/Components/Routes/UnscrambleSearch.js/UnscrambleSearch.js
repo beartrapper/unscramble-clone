@@ -10,7 +10,6 @@ import {
 // import { Animated } from "react-animated-css";
 import Footer from "../../footer/Footer";
 import { Link } from "react-router-dom";
-import { scrabble } from "../../../dictFiles/scrabble";
 import axios from 'axios';
 
 const UnscrambleSearch = () => {
