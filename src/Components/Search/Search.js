@@ -156,54 +156,13 @@ const Search = () => {
     }
   };
 
-  //number assignment
-  // const assignNumber = str => {
-  //   let num = 0;
-  //   for (let count = 0; count < str.length; count++)
-  //     if (
-  //       str[count] == "a" ||
-  //       str[count] == "e" ||
-  //       str[count] == "i" ||
-  //       str[count] == "o" ||
-  //       str[count] == "u" ||
-  //       str[count] == "l" ||
-  //       str[count] == "s" ||
-  //       str[count] == "t" ||
-  //       str[count] == "r"
-  //     )
-  //       num++;
-  //     else if (str[count] == "d" || str[count] == "g") num = num + 2;
-  //     else if (
-  //       str[count] == "b" ||
-  //       str[count] == "c" ||
-  //       str[count] == "m" ||
-  //       str[count] == "p"
-  //     )
-  //       num = num + 3;
-  //     else if (
-  //       str[count] == "f" ||
-  //       str[count] == "h" ||
-  //       str[count] == "v" ||
-  //       str[count] == "w" ||
-  //       str[count] == "y"
-  //     )
-  //       num = num + 4;
-  //     else if (str[count] == "k") num = num + 5;
-  //     else if (str[count] == "j" || str[count] == "x") num = num + 8;
-  //     else if (str[count] == "q" || str[count] == "z") num = num + 10;
-  //   return num;
-  // };
 
  
 
   return (
     <>
  {/* {console.log("ander" + tempArray1.length)} */}
-      <div>
- 
-        <div className="header">
-    
-        <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav navbar-fixed-top">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav fixed-top">
         <div class="container-fluid">
   <a class="navbar-brand" href="#">Scrabbler</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -250,6 +209,13 @@ const Search = () => {
   </div>
   </div>
 </nav>
+    
+
+
+      <div>
+    
+ 
+        <div className="header">
     
 
        
