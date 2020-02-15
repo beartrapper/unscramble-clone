@@ -9,10 +9,10 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
- 
-app.get('/api/unscramble', (req, res) => {
-
-    res.send(loopAddon.sumNow({'letters' : 'QWERTY'}))
+//only this route will be used
+app.post('/api/unscramble', (req, res) => {
+    console.log(req.body.letters)
+    res.send(loopAddon.sumNow({'letters' : req.body.letters}))
 })
 
 app.get('/api/wwf', (req, res ) => {

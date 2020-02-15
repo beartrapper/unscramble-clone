@@ -63,7 +63,7 @@ const Search = () => {
         "letters": inputValue.toUpperCase()
       };
 
-      const ActualArray = await axios.get('http://localhost:5000/api/unscramble');
+      const ActualArray = await axios.post('http://localhost:5000/api/unscramble', value);
 
       // ActualArray = [...new Set(ActualArray)];
       
