@@ -11,6 +11,8 @@ import {
 import Footer from "../../footer/Footer";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import AdComponent from "../../Adsense/Adsense";
+import AdComponentTop from "../../Adsense/AdsenseBanner";
 
 const WWFCheat = () => {
   const [inputValue, setInputValue] = useState("");
@@ -18,7 +20,7 @@ const WWFCheat = () => {
   const [updateState, setUpdateState] = useState(false);
   const [Array1, setArray1] = useState([]);
   const [Array2, setArray2] = useState([]);
-  const [Array3, setArray3] = useState([]);
+  const [Array3, setArray3] = useState([]); 
   const [Array4, setArray4] = useState([]);
   const [Array5, setArray5] = useState([]);
   const [Array6, setArray6] = useState([]);
@@ -36,8 +38,11 @@ const WWFCheat = () => {
   let tempArray7 = [];
   let tempArray8 = [];
   let tempArray9 = [];
+  const windowLocation = window.location.href;
+  console.log(windowLocation);
 
   const [width, setWidth] = React.useState(window.innerWidth);
+
   const [clickedTrue, setClickedTrue] = useState(false);
 
   const Filter = e => {
@@ -47,6 +52,7 @@ const WWFCheat = () => {
     else 
       setClickedTrue(true)
   }
+
   const onClicked = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -62,7 +68,7 @@ const WWFCheat = () => {
         "letters": inputValue.toUpperCase()
       };
 
-      const ActualArray = await axios.get('http://localhost:5000/api/unscramble');
+      const ActualArray = await axios.post('http://localhost:5000/api/unscramble', value);
 
       // ActualArray = [...new Set(ActualArray)];
       
@@ -155,73 +161,16 @@ const WWFCheat = () => {
     }
   };
 
-  //number assignment
-  const assignNumber = str => {
-    let num = 0;
-    for (let count = 0; count < str.length; count++)
-      if (
-        str[count] == "a" ||
-        str[count] == "e" ||
-        str[count] == "i" ||
-        str[count] == "o" ||
-        str[count] == "u" ||
-        str[count] == "l" ||
-        str[count] == "s" ||
-        str[count] == "t" ||
-        str[count] == "r"
-      )
-        num++;
-      else if (str[count] == "d" || str[count] == "g") num = num + 2;
-      else if (
-        str[count] == "b" ||
-        str[count] == "c" ||
-        str[count] == "m" ||
-        str[count] == "p"
-      )
-        num = num + 3;
-      else if (
-        str[count] == "f" ||
-        str[count] == "h" ||
-        str[count] == "v" ||
-        str[count] == "w" ||
-        str[count] == "y"
-      )
-        num = num + 4;
-      else if (str[count] == "k") num = num + 5;
-      else if (str[count] == "j" || str[count] == "x") num = num + 8;
-      else if (str[count] == "q" || str[count] == "z") num = num + 10;
-    return num;
-  };
 
-  const options = [
-    { value: "one", label: "One" },
-    { value: "two", label: "Two", className: "myOptionClassName" },
-    {
-      type: "group",
-      name: "group1",
-      items: [
-        { value: "three", label: "Three", className: "myOptionClassName" },
-        { value: "four", label: "Four" }
-      ]
-    },
-    {
-      type: "group",
-      name: "group2",
-      items: [
-        { value: "five", label: "Five" },
-        { value: "six", label: "Six" }
-      ]
-    }
-  ];
+ 
 
   return (
     <>
- {/* {console.log("ander" + tempArray1.length)} */}
-      <div>
- 
-        <div className="header">
-    
-        <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav fixed-top">
+          <div id="Intro" className="back-ground">
+            <AdComponentTop />
+            </div>
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav">
         <div class="container-fluid">
   <a class="navbar-brand" href="#">Scrabbler</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -232,13 +181,13 @@ const WWFCheat = () => {
     <ul class="navbar-nav ml-auto">
     <Link to="/unscramble">
 
-      <li class="nav-item active">
+      <li class={"nav-item " + (windowLocation == "http://localhost:3000/unscramble" ? 'active' : ' ')}>
         <a class="nav-link" href="#">Unscrambler</a>
       </li>
       </Link>
       <Link to="/wwf">
 
-      <li class="nav-item">
+      <li class={"nav-item " + (windowLocation == "http://localhost:3000/wwf" ? 'active' : ' ')}>
         <a class="nav-link" href="#">WWF</a>
       </li>
       </Link>
@@ -270,27 +219,42 @@ const WWFCheat = () => {
 </nav>
     
 
-       
 
-          <div className="s006">
+      <div>
+    
+ 
+        <div className="header">
+    
+
+       
+    <div className="row">
+
+      
+          <div className="s006 col-lg-8">
             <form onSubmit={e => {e.preventDefault();onClicked(e)}}>
               <fieldset className="fieldset">
                 <legend className="legend">
-                  <h1 class="tmp">Words With Friends</h1>
+                  <h1 class="tmp">Words With Freinds</h1>
                 </legend>
+            
                 <div className="inner-form">
                   <div className="input-field">
-                    <button
-                      onClick={onClicked}
-                      className="btn-search"
-                      type="button"
-                    >
-                      {loading ? (
-                        <FontAwesomeIcon icon={faCheck} color="green" />
-                      ) : (
-                          <FontAwesomeIcon icon={faSearch} color="grey" />
-                        )}
-                    </button>
+          
+
+                <button
+                  onClick={onClicked}
+                  className="btn-search"
+                  type="button"
+                >
+                {loading ? (
+                  <FontAwesomeIcon icon={faCheck} color="green" />
+                ) : (
+                    <FontAwesomeIcon icon={faSearch} color="grey" />
+                  )}
+                </button>
+
+
+                   
 
                     <input
                       onChange={handleInput}
@@ -303,6 +267,7 @@ const WWFCheat = () => {
                     />
                   </div>
                 </div>
+
            
               
 {clickedTrue  ?  <>
@@ -314,36 +279,39 @@ const WWFCheat = () => {
   
 
 
-  <input className="input" placeholder="Ends In" type="text" /> </>:<></>}
-
-  
-
-              
+          <input className="input" placeholder="Ends In" type="text" /> </>:<></>}
                   {clickedTrue ? <div className="pt-2">
                     <div class="button search-btn-class" onClick={Filter}>
                     <div className="btn btn-lg">Hide</div>
-                  </div>
-                  &nbsp;
-                  &nbsp;
-                  &nbsp;
-                  <div class="button mr-3 search-btn-class button-grey">
-                 <div className="btn btn-lg ">Search</div>
-                  </div>  </div>:
-                  <div class="button" onClick={Filter}>
-                  <span class="button__mask"></span>
-                  <span class="button__text">
-                    <FontAwesomeIcon icon={faFilter} />
-                    &nbsp; Advanced
-                  </span>
-                  <span class="button__text button__text--bis">
-                    <FontAwesomeIcon icon={faFilter} />
-                    &nbsp; Advanced
+                      </div>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      <div class="button mr-3 search-btn-class button-grey">
+                      <div className="btn btn-lg ">Search</div>
+                      </div>  </div>:
+                      <div class="button" onClick={Filter}>
+                      <span class="button__mask"></span>
+                      <span class="button__text">
+                        <FontAwesomeIcon icon={faFilter} />
+                        &nbsp; Advanced
+                      </span>
+                      <span class="button__text button__text--bis">
+                        <FontAwesomeIcon icon={faFilter} />
+                        &nbsp; Advanced
                   </span></div>}
                  
                 
               </fieldset>
             </form>
           </div>
+        
+          <div className="col-lg-4">
+            <AdComponent />
+        </div>
+        
+        </div>
+
         </div>
       </div>
       {render ? (
@@ -401,7 +369,6 @@ const WWFCheat = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -429,7 +396,6 @@ const WWFCheat = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -457,7 +423,6 @@ const WWFCheat = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -484,7 +449,6 @@ const WWFCheat = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -511,7 +475,6 @@ const WWFCheat = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -538,7 +501,6 @@ const WWFCheat = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -566,7 +528,6 @@ const WWFCheat = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -595,7 +556,6 @@ const WWFCheat = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>

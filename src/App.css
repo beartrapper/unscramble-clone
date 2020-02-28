@@ -46,6 +46,7 @@
 
 .header {
   overflow: hidden;
+  margin: 0;
 }
 
 
@@ -86,6 +87,7 @@
   /* width: 40%; */
   font-size: 3rem;
   color: #005a9c;
+  top: 10vh
   /* background-color: #005a9c; */
   /* border-radius: 50px; */
 }
@@ -226,7 +228,7 @@
 
 .btn-search {
   float: right;
-  margin-left: 520px;
+  margin-left: 40vw;
   /* margin: 10px; */
   /* background-color: brown; */
 }
@@ -278,13 +280,9 @@
     margin-bottom: 20px;
     height: 60px;
     max-width: 80vw;
-    font-size:0.8em;
-    
+    font-size:0.8em; 
     /* padding-right:10vw; */
-
   }
-
-
 
   .input-field {
     padding-right: 15vw;
@@ -297,11 +295,11 @@
   .s006 form .inner-form .input-field .btn-search svg {
     width: 18px;
     height: 26px;
-    /* margin-right: 10vw; */
+    /* margin-right: 25vw; */
   }
 
   .btn-search {
-    margin-left: 250px;
+    margin-left: 65vw;
     max-width: 60px;
 
   }
@@ -316,6 +314,7 @@
 
   .s006 {
     padding-top: 10rem;
+    padding-bottom: -50rem;
   }
 
   #search {
@@ -329,9 +328,11 @@
   .s006 form .inner-form .input-field input::-webkit-input-placeholder {
     font-size: 0.7em;
     padding-bottom: 1em;
+    padding-top: 1em;
     padding-left: 10px;
 
   }
+
 }
 
 #search {
@@ -497,7 +498,7 @@ ol {
   overflow: hidden;
   opacity: 0.6;
   text-align: center;
-  margin-right:24vw;
+  margin-right:18vw;
   background-color: #fafafa;
   /* margin-top: -10rem; */
 }
@@ -515,6 +516,7 @@ ol {
   padding: 1em 2em;
   text-transform: uppercase;
   font-weight: bold;
+  margin-right: 10px
 }
 .button__text:before {
   content: attr(title);
@@ -1458,4 +1460,38 @@ and (max-width : 780px)
     margin-left: 5vw;
     padding-left: 8vw;
   }
+}
+
+
+.back-ground {
+  background-color: #F0F0F0;
+  position: relative;
+  width: 100vw;
+  padding:1vh;
+}
+
+/* .navbar-fixed-top {
+  top: 20px;
+}
+
+#Intro {
+  top: 0;
+  position: fixed;
+}
+
+.tempyy {
+  top: 20vh;
+} */
+
+.width_height {
+  width: 90vw;
+  height: 15vh;
+  padding-left: 10vw;
+}
+
+
+
+
+.py-5 {
+  margin-top: -30vh;
 }

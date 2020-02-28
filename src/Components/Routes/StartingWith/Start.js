@@ -211,7 +211,7 @@ const Search = () => {
       <ul class="navbar-nav ml-auto">
       <Link to="/unscramble">
   
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="#">Unscrambler</a>
         </li>
         </Link>
@@ -490,279 +490,271 @@ const Search = () => {
                     </ul>
                 </div>
             </section>
-        {render ? (
-         
-          <div class="container">
-            <div class="row py-5">
-              <div class="col-12">
-                <table id="example" class="table table-hover responsive nowrap">
-                  <thead class="background-thead">
-                    <tr>
-                      <th>Words</th>
-                      <th>Scrabble</th>
-                      <th>Words With Friends</th>
-  
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {tempArray9.length != 0 ? (
-                      tempArray9.map(item => {
-                        return (
-                          <>
-                            <tr>
-                              <td>
-                                <a href="#">
-                                  <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-grey mr-3">10</div>
-  
-                                    <div class="">
-                                      <p class="font-weight-bold mb-0">{item.word}</p>
-                                    </div>
-                                  </div>
-                                </a>
-                              </td>
-                              <td>{item.scrabble}</td>
-                              <td>{item.wwf}</td>
-                             
-                           
-                            </tr>
-                          </>
-                        );
-                      })
-                    ) : (
-                        <></>
-                      )}
-                      
-                    {tempArray8.length != 0 ? (
-                      tempArray8.map(item => {
-                        return (
-                          <>
-                            <tr>
-                              <td>
-                                <a href="#">
-                                  <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-pink mr-3">9</div>
-  
-                                    <div class="">
-                                      <p class="font-weight-bold mb-0">{item.word}</p>
-                                      {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                    </div>
-                                  </div>
-                                </a>
-                              </td>
-                              <td>{item.scrabble}</td>
-                              <td>{item.wwf}</td>
-                             
-                              
-                            </tr>
-                          </>
-                        );
-                      })
-                    ) : (
-                        <></>
-                      )}
-                    {tempArray7.length != 0 ? (
-                      tempArray7.map(item => {
-                        return (
-                          <>
-                            <tr>
-                              <td>
-                                <a href="#">
-                                  <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-blue mr-3">8</div>
-  
-                                    <div class="">
-                                      <p class="font-weight-bold mb-0">{item.word}</p>
-                                      {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                    </div>
-                                  </div>
-                                </a>
-                              </td>
-                              <td>{item.scrabble}</td>
-                              <td>{item.wwf}</td>
-                             
-                            
-                            </tr>
-                          </>
-                        );
-                      })
-                    ) : (
-                        <></>
-                      )}
-                    {tempArray6.length != 0 ? (
-                      tempArray6.map(item => {
-                        return (
-                          <>
-                            <tr>
-                              <td>
-                                <a href="#">
-                                  <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-red mr-3">7</div>
-  
-                                    <div class="">
-                                      <p class="font-weight-bold mb-0">{item.word}</p>
-                                      {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                    </div>
-                                  </div>
-                                </a>
-                              </td>
-                              <td>{item.scrabble}</td>
-                              <td>{item.wwf}</td>
+            {render ? (
+       
+       <div class="container">
+         <div class="row py-5">
+           <div class="col-12">
+             <table id="example" class="table table-hover responsive nowrap">
+               <thead class="background-thead">
+                 <tr>
+                   <th>Words</th>
+                   <th>Scrabble</th>
+                   <th>Words With Friends</th>
+
+                 </tr>
+               </thead>
+               <tbody>
+                 {tempArray9.length != 0 ? (
+                   tempArray9.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-grey mr-3">10</div>
+
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item.word}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{item.scrabble}</td>
+                           <td>{item.wwf}</td>
                           
-                            </tr>
-                          </>
-                        );
-                      })
-                    ) : (
-                        <></>
-                      )}
-                    {tempArray5.length != 0 ? (
-                      tempArray5.map(item => {
-                        return (
-                          <>
-                            <tr>
-                              <td>
-                                <a href="#">
-                                  <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-orange mr-3">6</div>
-  
-                                    <div class="">
-                                      <p class="font-weight-bold mb-0">{item.word}</p>
-                                      {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                    </div>
-                                  </div>
-                                </a>
-                              </td>
-                              <td>{item.scrabble}</td>
-                              <td>{item.wwf}</td>
-                            
-                            </tr>
-                          </>
-                        );
-                      })
-                    ) : (
-                        <></>
-                      )}
-                    {tempArray4.length != 0 ? (
-                      tempArray4.map(item => {
-                        return (
-                          <>
-                            <tr>
-                              <td>
-                                <a href="#">
-                                  <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-grey mr-3">5</div>
-  
-                                    <div class="">
-                                      <p class="font-weight-bold mb-0">{item.word}</p>
-                                      {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                    </div>
-                                  </div>
-                                </a>
-                              </td>
-                              <td>{item.scrabble}</td>
-                              <td>{item.wwf}</td>
-                          
-                            </tr>
-                          </>
-                        );
-                      })
-                    ) : (
-                        <></>
-                      )}
-                    {tempArray3.length != 0 ? (
-                      tempArray3.map(item => {
-                        return (
-                          <>
-                            <tr>
-                              <td>
-                                <a href="#">
-                                  <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-brown mr-3">4</div>
-  
-                                    <div class="">
-                                      <p class="font-weight-bold mb-0">{item.word}</p>
-                                      {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                    </div>
-                                  </div>
-                                </a>
-                              </td>
-                              <td>{item.scrabble}</td>
-                              <td>{item.wwf}</td>
-                             
                         
-                            </tr>
-                          </>
-                        );
-                      })
-                    ) : (
-                        <></>
-                      )}
-                    {Array2.length != 0 ? (
-                      Array2.map(item => {
-                        return (
-                          <>
-                            <tr>
-                              <td>
-                                <a href="#">
-                                  <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-pink mr-3">3</div>
-  
-                                    <div class="">
-                                      <p class="font-weight-bold mb-0">{item.word}</p>
-                                      {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                    </div>
-                                  </div>
-                                </a>
-                              </td>
-                              <td>{item.scrabble}</td>
-                              <td>{item.wwf}</td>
-                      
-                            </tr>
-                          </>
-                        );
-                      })
-                    ) : (
-                        <></>
-                      )}
-  
-                    {Array1.length != 0 ? (
-                      Array1.map(item => {
-                        console.log('here are the' + item)
-                        return (
-                          <>
-                            <tr>
-                              <td>
-                                <a href="#">
-                                  <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-blue mr-3">2</div>
-  
-                                    <div class="">
-                                      <p class="font-weight-bold mb-0">{item.word}</p>
-                                      {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
-                                    </div>
-                                  </div>
-                                </a>
-                              </td>
-                              <td>{item.scrabble}</td>
-                              <td>{item.wwf}</td>
-                             
-                      
-                            </tr>
-                          </>
-                        );
-                      })
-                    ) : (
-                        <></>
-                      )}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        ) : (
-            <></>
-          )}
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                   
+                 {tempArray8.length != 0 ? (
+                   tempArray8.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-pink mr-3">9</div>
+
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item.word}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{item.scrabble}</td>
+                           <td>{item.wwf}</td>
+                          
+                           
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {tempArray7.length != 0 ? (
+                   tempArray7.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-blue mr-3">8</div>
+
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item.word}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{item.scrabble}</td>
+                           <td>{item.wwf}</td>
+                          
+                         
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {tempArray6.length != 0 ? (
+                   tempArray6.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-red mr-3">7</div>
+
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item.word}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{item.scrabble}</td>
+                           <td>{item.wwf}</td>
+                       
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {tempArray5.length != 0 ? (
+                   tempArray5.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-orange mr-3">6</div>
+
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item.word}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{item.scrabble}</td>
+                           <td>{item.wwf}</td>
+                         
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {tempArray4.length != 0 ? (
+                   tempArray4.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-grey mr-3">5</div>
+
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item.word}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{item.scrabble}</td>
+                           <td>{item.wwf}</td>
+                       
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {tempArray3.length != 0 ? (
+                   tempArray3.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-brown mr-3">4</div>
+
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item.word}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{item.scrabble}</td>
+                           <td>{item.wwf}</td>
+                          
+                     
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+                 {Array2.length != 0 ? (
+                   Array2.map(item => {
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-pink mr-3">3</div>
+
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item.word}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{item.scrabble}</td>
+                           <td>{item.wwf}</td>
+                   
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+
+                 {Array1.length != 0 ? (
+                   Array1.map(item => {
+                     console.log('here are the' + item)
+                     return (
+                       <>
+                         <tr>
+                           <td>
+                             <a href="#">
+                               <div class="d-flex align-items-center">
+                                 <div class="avatar avatar-blue mr-3">2</div>
+
+                                 <div class="">
+                                   <p class="font-weight-bold mb-0">{item.word}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           </td>
+                           <td>{item.scrabble}</td>
+                           <td>{item.wwf}</td>
+                          
+                   
+                         </tr>
+                       </>
+                     );
+                   })
+                 ) : (
+                     <></>
+                   )}
+               </tbody>
+             </table>
+           </div>
+         </div>
+       </div>
+     ) : (
+         <></>
+       )}
   
         <Footer />
       </>

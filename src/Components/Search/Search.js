@@ -10,6 +10,9 @@ import {
 import Footer from "../footer/Footer";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import AdComponent from "../Adsense/Adsense";
+import AdComponentTop from "../Adsense/AdsenseBanner";
+
 
 const Search = () => {
   const [inputValue, setInputValue] = useState("");
@@ -35,6 +38,8 @@ const Search = () => {
   let tempArray7 = [];
   let tempArray8 = [];
   let tempArray9 = [];
+  const windowLocation = window.location.href;
+  console.log(windowLocation);
 
   const [width, setWidth] = React.useState(window.innerWidth);
 
@@ -161,8 +166,11 @@ const Search = () => {
 
   return (
     <>
- {/* {console.log("ander" + tempArray1.length)} */}
- <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav fixed-top">
+          <div id="Intro" className="back-ground">
+            <AdComponentTop />
+            </div>
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav">
         <div class="container-fluid">
   <a class="navbar-brand" href="#">Scrabbler</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -173,13 +181,13 @@ const Search = () => {
     <ul class="navbar-nav ml-auto">
     <Link to="/unscramble">
 
-      <li class="nav-item active">
+      <li class={"nav-item " + (windowLocation == "http://localhost:3000/unscramble" ? 'active' : ' ')}>
         <a class="nav-link" href="#">Unscrambler</a>
       </li>
       </Link>
       <Link to="/wwf">
 
-      <li class="nav-item">
+      <li class={"nav-item " + (windowLocation == "http://localhost:3000/wwf" ? 'active' : ' ')}>
         <a class="nav-link" href="#">WWF</a>
       </li>
       </Link>
@@ -219,26 +227,34 @@ const Search = () => {
     
 
        
+    <div className="row">
 
-          <div className="s006">
+      
+          <div className="s006 col-lg-8">
             <form onSubmit={e => {e.preventDefault();onClicked(e)}}>
               <fieldset className="fieldset">
                 <legend className="legend">
                   <h1 class="tmp">Your Letters.. My Words!</h1>
                 </legend>
+            
                 <div className="inner-form">
                   <div className="input-field">
-                    <button
-                      onClick={onClicked}
-                      className="btn-search"
-                      type="button"
-                    >
-                      {loading ? (
-                        <FontAwesomeIcon icon={faCheck} color="green" />
-                      ) : (
-                          <FontAwesomeIcon icon={faSearch} color="grey" />
-                        )}
-                    </button>
+          
+
+                <button
+                  onClick={onClicked}
+                  className="btn-search"
+                  type="button"
+                >
+                {loading ? (
+                  <FontAwesomeIcon icon={faCheck} color="green" />
+                ) : (
+                    <FontAwesomeIcon icon={faSearch} color="grey" />
+                  )}
+                </button>
+
+
+                   
 
                     <input
                       onChange={handleInput}
@@ -251,6 +267,7 @@ const Search = () => {
                     />
                   </div>
                 </div>
+
            
               
 {clickedTrue  ?  <>
@@ -262,36 +279,39 @@ const Search = () => {
   
 
 
-  <input className="input" placeholder="Ends In" type="text" /> </>:<></>}
-
-  
-
-              
+          <input className="input" placeholder="Ends In" type="text" /> </>:<></>}
                   {clickedTrue ? <div className="pt-2">
                     <div class="button search-btn-class" onClick={Filter}>
                     <div className="btn btn-lg">Hide</div>
-                  </div>
-                  &nbsp;
-                  &nbsp;
-                  &nbsp;
-                  <div class="button mr-3 search-btn-class button-grey">
-                 <div className="btn btn-lg ">Search</div>
-                  </div>  </div>:
-                  <div class="button" onClick={Filter}>
-                  <span class="button__mask"></span>
-                  <span class="button__text">
-                    <FontAwesomeIcon icon={faFilter} />
-                    &nbsp; Advanced
-                  </span>
-                  <span class="button__text button__text--bis">
-                    <FontAwesomeIcon icon={faFilter} />
-                    &nbsp; Advanced
+                      </div>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      <div class="button mr-3 search-btn-class button-grey">
+                      <div className="btn btn-lg ">Search</div>
+                      </div>  </div>:
+                      <div class="button" onClick={Filter}>
+                      <span class="button__mask"></span>
+                      <span class="button__text">
+                        <FontAwesomeIcon icon={faFilter} />
+                        &nbsp; Advanced
+                      </span>
+                      <span class="button__text button__text--bis">
+                        <FontAwesomeIcon icon={faFilter} />
+                        &nbsp; Advanced
                   </span></div>}
                  
                 
               </fieldset>
             </form>
           </div>
+        
+          <div className="col-lg-4">
+            <AdComponent />
+        </div>
+        
+        </div>
+
         </div>
       </div>
       {render ? (
@@ -349,7 +369,6 @@ const Search = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -377,7 +396,6 @@ const Search = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -405,7 +423,6 @@ const Search = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -432,7 +449,6 @@ const Search = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -459,7 +475,6 @@ const Search = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -486,7 +501,6 @@ const Search = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -514,7 +528,6 @@ const Search = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
@@ -543,7 +556,6 @@ const Search = () => {
 
                                   <div class="">
                                     <p class="font-weight-bold mb-0">{item.word}</p>
-                                    {/* <p class="text-muted mb-0">julie_89@example.com</p> */}
                                   </div>
                                 </div>
                               </a>
