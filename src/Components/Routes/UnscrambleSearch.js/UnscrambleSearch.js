@@ -12,7 +12,7 @@ import Footer from "../../footer/Footer";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import AdComponent from "../../Adsense/Adsense";
-import AdComponentTop from "../../Adsense/AdsenseBanner";
+// import AdComponentTop from "../../Adsense/AdsenseBanner";
 
 const UnscrambleSearch = () => {
   const [inputValue, setInputValue] = useState("");
@@ -38,8 +38,8 @@ const UnscrambleSearch = () => {
   let tempArray7 = [];
   let tempArray8 = [];
   let tempArray9 = [];
-  const windowLocation = window.location.href;
-  console.log(windowLocation);
+  // const windowLocation = window.location.href;
+  // console.log(windowLocation);
 
   const [width, setWidth] = React.useState(window.innerWidth);
 
@@ -167,7 +167,7 @@ const UnscrambleSearch = () => {
   return (
     <>
           <div id="Intro" className="back-ground">
-            <AdComponentTop />
+            {/* <AdComponentTop /> */}
             </div>
 
  <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav">
@@ -181,13 +181,13 @@ const UnscrambleSearch = () => {
     <ul class="navbar-nav ml-auto">
     <Link to="/unscramble">
 
-      <li class={"nav-item " + (windowLocation == "http://localhost:3000/unscramble" ? 'active' : ' ')}>
+      <li class={"nav-item " + (window.location.href == "http://localhost:3000/unscramble" ? 'active' : ' ')}>
         <a class="nav-link" href="#">Unscrambler</a>
       </li>
       </Link>
       <Link to="/wwf">
 
-      <li class={"nav-item " + (windowLocation == "http://localhost:3000/wwf" ? 'active' : ' ')}>
+      <li class={"nav-item " + (window.location.href == "http://localhost:3000/wwf" ? 'active' : ' ')}>
         <a class="nav-link" href="#">WWF</a>
       </li>
       </Link>
@@ -307,7 +307,7 @@ const UnscrambleSearch = () => {
           </div>
         
           <div className="col-lg-4">
-            <AdComponent />
+            {/* <AdComponent /> */}
         </div>
         
         </div>

@@ -14,6 +14,7 @@ import AdComponent from "../Adsense/Adsense";
 import AdComponentTop from "../Adsense/AdsenseBanner";
 
 
+
 const Search = () => {
   const [inputValue, setInputValue] = useState("");
   const [err, setErr] = useState(false);
@@ -38,8 +39,8 @@ const Search = () => {
   let tempArray7 = [];
   let tempArray8 = [];
   let tempArray9 = [];
-  const windowLocation = window.location.href;
-  console.log(windowLocation);
+  // const windowLocation = window.location.href;
+  // console.log(windowLocation);
 
   const [width, setWidth] = React.useState(window.innerWidth);
 
@@ -181,13 +182,13 @@ const Search = () => {
     <ul class="navbar-nav ml-auto">
     <Link to="/unscramble">
 
-      <li class={"nav-item " + (windowLocation == "http://localhost:3000/unscramble" ? 'active' : ' ')}>
+      <li class={"nav-item " + (window.location.href == "http://localhost:3000/unscramble" ? 'active' : ' ')}>
         <a class="nav-link" href="#">Unscrambler</a>
       </li>
       </Link>
       <Link to="/wwf">
 
-      <li class={"nav-item " + (windowLocation == "http://localhost:3000/wwf" ? 'active' : ' ')}>
+      <li class={"nav-item " + (window.location.href == "http://localhost:3000/wwf" ? 'active' : ' ')}>
         <a class="nav-link" href="#">WWF</a>
       </li>
       </Link>
