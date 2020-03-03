@@ -47,7 +47,7 @@ const LetterWords = () => {
    
  
       const ActualArray = []
-      axios.get('http://localhost:5000/api/unscramble')
+      axios.post('http://localhost:5000/api/unscramble', location.state.letter)
       .then(res => {
         ActualArray = res.data;
         for (let count = 0; count < ActualArray.data.length; count++) {

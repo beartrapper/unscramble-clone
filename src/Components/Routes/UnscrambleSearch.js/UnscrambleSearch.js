@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import AdComponent from "../../Adsense/Adsense";
 // import AdComponentTop from "../../Adsense/AdsenseBanner";
+import AdSense from 'react-adsense';
+
 
 const UnscrambleSearch = () => {
   const [inputValue, setInputValue] = useState("");
@@ -168,6 +170,14 @@ const UnscrambleSearch = () => {
     <>
           <div id="Intro" className="back-ground">
             {/* <AdComponentTop /> */}
+            <AdSense.Google
+            client='ca-pub-2213646733957075'
+            slot='2997026131'
+            // style={{ display: 'block' }}
+            format='auto'
+            responsive='true'
+            layoutKey='-gw-1+2a-9x+5c'
+          />
             </div>
 
  <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav">
@@ -308,6 +318,14 @@ const UnscrambleSearch = () => {
         
           <div className="col-lg-4">
             {/* <AdComponent /> */}
+            <AdSense.Google
+            client='ca-pub-2213646733957075'
+            slot='2997026131'
+            // style={{ display: 'block' }}
+            format='auto'
+            responsive='true'
+            layoutKey='-gw-1+2a-9x+5c'
+          />
         </div>
         
         </div>

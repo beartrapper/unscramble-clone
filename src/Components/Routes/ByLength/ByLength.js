@@ -11,6 +11,8 @@ import {
 import Footer from "../../footer/Footer";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import AdSense from 'react-adsense';
+
 
 const Length = () => {
     const [inputValue, setInputValue] = useState("");
@@ -218,491 +220,529 @@ const Length = () => {
 
     return (
       <>
-    {/* {console.log("ander" + tempArray1.length)} */}
-        <div>
-    
-          <div className="header">
-      
-          <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav fixed-top">
-          <div class="container-fluid">
-    <a class="navbar-brand" href="#">Scrabbler</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-      <Link to="/unscramble">
-    
-        <li class="nav-item">
-          <a class="nav-link" href="#">Unscrambler</a>
-        </li>
-        </Link>
-        <Link to="/wwf">
-    
-        <li class="nav-item">
-          <a class="nav-link" href="#">WWF</a>
-        </li>
-        </Link>
-        <li>
-        <div class="dropdown">
-    <button class="dropbtn">Words List</button>
-    <div class="dropdown-content">
-    <Link to="/start">
-    
-    <a class="dropdown-item" href="#">Words starting with</a>
-    </Link>
-    <Link to="/end">
-    
-    <a class="dropdown-item" href="#">Words that end with</a>
-    </Link>
-    <Link to="/length">
-    
-    <a class="dropdown-item" href="#">Words by length</a>
-    </Link>
-    </div>
-    </div>
-        </li>
-       
-      
-      </ul>
-    
-    </div>
-    </div>
-    </nav>
-      
-    
-         
-    
-            <div className="s006">
-              <form onSubmit={e => {e.preventDefault();onClicked(e)}}>
-                <fieldset className="fieldset">
-                  <legend className="legend">
-                    <h1 class="tmp">Your Letters.. My Words!</h1>
-                  </legend>
-                  <div className="inner-form">
-                    <div className="input-field">
-                      <button
-                        onClick={onClicked}
-                        className="btn-search"
-                        type="button"
-                      >
-                        {loading ? (
-                          <FontAwesomeIcon icon={faCheck} color="green" />
-                        ) : (
-                            <FontAwesomeIcon icon={faSearch} color="grey" />
-                          )}
-                      </button>
-    
-                      <input
-                        onChange={handleInput}
-                        id="search"
-                        type="text"
-                        placeholder="Type here.."
-                        style={{
-                          border: err ? "5px solid #d80b0b" : "5px solid #005a9c"
-                        }}
-                      />
-                    </div>
-                  </div>
-             
-                
-    {clickedTrue  ?  <>
-    <input className="input" placeholder="Starts with" type="text" />
-    
-    
-    
-    <input className="input" placeholder="Contains" type="text" />
-    
-    
-    
-    <input className="input" placeholder="Ends In" type="text" /> </>:<></>}
-    
-    
-    
-                
-                    {clickedTrue ? <div className="pt-2">
-                      <div class="button search-btn-class" onClick={Filter}>
-                      <div className="btn btn-lg">Hide</div>
-                    </div>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    <div class="button mr-3 search-btn-class button-grey">
-                   <div className="btn btn-lg ">Search</div>
-                    </div>  </div>:
-                    <div class="button" onClick={Filter}>
-                    <span class="button__mask"></span>
-                    <span class="button__text">
-                      <FontAwesomeIcon icon={faFilter} />
-                      &nbsp; Advanced
-                    </span>
-                    <span class="button__text button__text--bis">
-                      <FontAwesomeIcon icon={faFilter} />
-                      &nbsp; Advanced
-                    </span></div>}
-                   
-                  
-                </fieldset>
-              </form>
-            </div>
-          </div>
+      <div id="Intro" className="back-ground">
+      <AdSense.Google
+        client='ca-pub-2213646733957075'
+        slot='2997026131'
+        // style={{ display: 'block' }}
+        format='auto'
+        responsive='true'
+        layoutKey='-gw-1+2a-9x+5c'
+      />
+        {/* <AdComponentTop /> */}
         </div>
 
-        <div className="container">
-                <ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav">
+    <div class="container-fluid">
+<a class="navbar-brand" href="#">Scrabbler</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav ml-auto">
+<Link to="/unscramble">
+
+  <li class={"nav-item " + (window.location.href == "http://localhost:3000/unscramble" ? 'active' : ' ')}>
+    <a class="nav-link" href="#">Unscrambler</a>
+  </li>
+  </Link>
+  <Link to="/wwf">
+
+  <li class={"nav-item " + (window.location.href == "http://localhost:3000/wwf" ? 'active' : ' ')}>
+    <a class="nav-link" href="#">WWF</a>
+  </li>
+  </Link>
+  <li>
+  <div class="dropdown">
+<button class="dropbtn">Words List</button>
+<div class="dropdown-content">
+<Link to="/start">
+
+<a class="dropdown-item" href="#">Words starting with</a>
+</Link>
+<Link to="/end">
+
+<a class="dropdown-item" href="#">Words that end with</a>
+</Link>
+<Link to="/length">
+
+<a class="dropdown-item" href="#">Words by length</a>
+</Link>
+</div>
+</div>
+  </li>
+ 
+
+</ul>
+
+</div>
+</div>
+</nav>
 
 
 
-                   <Link to={{
-                            pathname: "/letterwords",
-                            state: {
-                                letter: 2
-                            }
-                            
-                        }} > <div className="row"><button className="btn btn-link">  <li >2 Letters Words</li></button></div></Link>
-                   <Link to={{
-                            pathname: "/letterwords",
-                            state: {
-                                letter: 3
-                            }
-                            
-                        }} > <div className="row"><button className="btn btn-link">  <li >3 Letters Words</li></button></div></Link>
-                   <Link to={{
-                            pathname: "/letterwords",
-                            state: {
-                                letter: 4
-                            }
-                            
-                        }} > <div className="row"><button className="btn btn-link">  <li >4 Letters Words</li></button></div></Link>
-                   <Link to={{
-                            pathname: "/letterwords",
-                            state: {
-                                letter: 5
-                            }
-                            
-                        }} > <div className="row"><button className="btn btn-link">  <li >5 Letters Words</li></button></div></Link>
-                   <Link to={{
-                            pathname: "/letterwords",
-                            state: {
-                                letter: 6
-                            }
-                            
-                        }} > <div className="row"><button className="btn btn-link">  <li >6 Letters Words</li></button></div></Link>
-                   <Link to={{
-                            pathname: "/letterwords",
-                            state: {
-                                letter: 7
-                            }
-                            
-                        }} > <div className="row"><button className="btn btn-link">  <li >7 Letters Words</li></button></div></Link>
-                   <Link to={{
-                            pathname: "/letterwords",
-                            state: {
-                                letter: 8
-                            }
-                            
-                        }} > <div className="row"><button className="btn btn-link">  <li >8 Letters Words</li></button></div></Link>
-                   <Link to={{
-                            pathname: "/letterwords",
-                            state: {
-                                letter: 9
-                            }
-                            
-                        }} > <div className="row"><button className="btn btn-link">  <li >9 Letters Words</li></button></div></Link>
-                   <div className="row"><button className="btn btn-link">  <li >2 Letter Words star K</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >3 Letter Words star L</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >2 Letter Words star M</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >5 Letter Words star N</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >4 Letter Words star O</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >6 Letter Words star P</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >2 Letter Words star Q</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >4 Letter Words star R</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >3 Letter Words star S</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >2 Letter Words star T</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >6 Letter Words star U</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >7 Letter Words star V</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >3 Letter Words star W</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >2 Letter Words star X</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >3 Letter Words star Y</li></button></div>
-                   <div className="row"><button className="btn btn-link">  <li >2 Letter Words starting Z</li></button></div>
+  <div>
 
 
+    <div className="header">
 
 
-                </ul>
+   
+<div className="row">
+
+  
+      <div className="s006 col-lg-8">
+        <form onSubmit={e => {e.preventDefault();onClicked(e)}}>
+          <fieldset className="fieldset">
+            <legend className="legend">
+              <h1 class="tmp">Your Letters.. My Words!</h1>
+            </legend>
+        
+            <div className="inner-form">
+              <div className="input-field">
+      
+
+            <button
+              onClick={onClicked}
+              className="btn-search"
+              type="button"
+            >
+            {loading ? (
+              <FontAwesomeIcon icon={faCheck} color="green" />
+            ) : (
+                <FontAwesomeIcon icon={faSearch} color="grey" />
+              )}
+            </button>
+
+
+               
+
+                <input
+                  onChange={handleInput}
+                  id="search"
+                  type="text"
+                  placeholder="Type here.."
+                  style={{
+                    border: err ? "5px solid #d80b0b" : "5px solid #005a9c"
+                  }}
+                />
+              </div>
             </div>
 
-
-            {render ? (
        
-       <div class="container">
-         <div class="row py-5">
-           <div class="col-12">
-             <table id="example" class="table table-hover responsive nowrap">
-               <thead class="background-thead">
-                 <tr>
-                   <th>Words</th>
-                   <th>Scrabble</th>
-                   <th>Words With Friends</th>
+          
+{clickedTrue  ?  <>
+<input className="input" placeholder="Starts with" type="text" />
 
-                 </tr>
-               </thead>
-               <tbody>
-                 {tempArray9.length != 0 ? (
-                   tempArray9.map(item => {
-                     return (
-                       <>
-                         <tr>
-                           <td>
-                             <a href="#">
-                               <div class="d-flex align-items-center">
-                                 <div class="avatar avatar-grey mr-3">10</div>
 
-                                 <div class="">
-                                   <p class="font-weight-bold mb-0">{item.word}</p>
-                                 </div>
-                               </div>
-                             </a>
-                           </td>
-                           <td>{item.scrabble}</td>
-                           <td>{item.wwf}</td>
-                          
-                        
-                         </tr>
-                       </>
-                     );
-                   })
-                 ) : (
-                     <></>
-                   )}
-                   
-                 {tempArray8.length != 0 ? (
-                   tempArray8.map(item => {
-                     return (
-                       <>
-                         <tr>
-                           <td>
-                             <a href="#">
-                               <div class="d-flex align-items-center">
-                                 <div class="avatar avatar-pink mr-3">9</div>
 
-                                 <div class="">
-                                   <p class="font-weight-bold mb-0">{item.word}</p>
-                                 </div>
-                               </div>
-                             </a>
-                           </td>
-                           <td>{item.scrabble}</td>
-                           <td>{item.wwf}</td>
-                          
-                           
-                         </tr>
-                       </>
-                     );
-                   })
-                 ) : (
-                     <></>
-                   )}
-                 {tempArray7.length != 0 ? (
-                   tempArray7.map(item => {
-                     return (
-                       <>
-                         <tr>
-                           <td>
-                             <a href="#">
-                               <div class="d-flex align-items-center">
-                                 <div class="avatar avatar-blue mr-3">8</div>
+<input className="input" placeholder="Contains" type="text" />
 
-                                 <div class="">
-                                   <p class="font-weight-bold mb-0">{item.word}</p>
-                                 </div>
-                               </div>
-                             </a>
-                           </td>
-                           <td>{item.scrabble}</td>
-                           <td>{item.wwf}</td>
-                          
-                         
-                         </tr>
-                       </>
-                     );
-                   })
-                 ) : (
-                     <></>
-                   )}
-                 {tempArray6.length != 0 ? (
-                   tempArray6.map(item => {
-                     return (
-                       <>
-                         <tr>
-                           <td>
-                             <a href="#">
-                               <div class="d-flex align-items-center">
-                                 <div class="avatar avatar-red mr-3">7</div>
 
-                                 <div class="">
-                                   <p class="font-weight-bold mb-0">{item.word}</p>
-                                 </div>
-                               </div>
-                             </a>
-                           </td>
-                           <td>{item.scrabble}</td>
-                           <td>{item.wwf}</td>
-                       
-                         </tr>
-                       </>
-                     );
-                   })
-                 ) : (
-                     <></>
-                   )}
-                 {tempArray5.length != 0 ? (
-                   tempArray5.map(item => {
-                     return (
-                       <>
-                         <tr>
-                           <td>
-                             <a href="#">
-                               <div class="d-flex align-items-center">
-                                 <div class="avatar avatar-orange mr-3">6</div>
 
-                                 <div class="">
-                                   <p class="font-weight-bold mb-0">{item.word}</p>
-                                 </div>
-                               </div>
-                             </a>
-                           </td>
-                           <td>{item.scrabble}</td>
-                           <td>{item.wwf}</td>
-                         
-                         </tr>
-                       </>
-                     );
-                   })
-                 ) : (
-                     <></>
-                   )}
-                 {tempArray4.length != 0 ? (
-                   tempArray4.map(item => {
-                     return (
-                       <>
-                         <tr>
-                           <td>
-                             <a href="#">
-                               <div class="d-flex align-items-center">
-                                 <div class="avatar avatar-grey mr-3">5</div>
-
-                                 <div class="">
-                                   <p class="font-weight-bold mb-0">{item.word}</p>
-                                 </div>
-                               </div>
-                             </a>
-                           </td>
-                           <td>{item.scrabble}</td>
-                           <td>{item.wwf}</td>
-                       
-                         </tr>
-                       </>
-                     );
-                   })
-                 ) : (
-                     <></>
-                   )}
-                 {tempArray3.length != 0 ? (
-                   tempArray3.map(item => {
-                     return (
-                       <>
-                         <tr>
-                           <td>
-                             <a href="#">
-                               <div class="d-flex align-items-center">
-                                 <div class="avatar avatar-brown mr-3">4</div>
-
-                                 <div class="">
-                                   <p class="font-weight-bold mb-0">{item.word}</p>
-                                 </div>
-                               </div>
-                             </a>
-                           </td>
-                           <td>{item.scrabble}</td>
-                           <td>{item.wwf}</td>
-                          
-                     
-                         </tr>
-                       </>
-                     );
-                   })
-                 ) : (
-                     <></>
-                   )}
-                 {Array2.length != 0 ? (
-                   Array2.map(item => {
-                     return (
-                       <>
-                         <tr>
-                           <td>
-                             <a href="#">
-                               <div class="d-flex align-items-center">
-                                 <div class="avatar avatar-pink mr-3">3</div>
-
-                                 <div class="">
-                                   <p class="font-weight-bold mb-0">{item.word}</p>
-                                 </div>
-                               </div>
-                             </a>
-                           </td>
-                           <td>{item.scrabble}</td>
-                           <td>{item.wwf}</td>
-                   
-                         </tr>
-                       </>
-                     );
-                   })
-                 ) : (
-                     <></>
-                   )}
-
-                 {Array1.length != 0 ? (
-                   Array1.map(item => {
-                     console.log('here are the' + item)
-                     return (
-                       <>
-                         <tr>
-                           <td>
-                             <a href="#">
-                               <div class="d-flex align-items-center">
-                                 <div class="avatar avatar-blue mr-3">2</div>
-
-                                 <div class="">
-                                   <p class="font-weight-bold mb-0">{item.word}</p>
-                                 </div>
-                               </div>
-                             </a>
-                           </td>
-                           <td>{item.scrabble}</td>
-                           <td>{item.wwf}</td>
-                          
-                   
-                         </tr>
-                       </>
-                     );
-                   })
-                 ) : (
-                     <></>
-                   )}
-               </tbody>
-             </table>
-           </div>
-         </div>
-       </div>
-     ) : (
-         <></>
-       )}
+      <input className="input" placeholder="Ends In" type="text" /> </>:<></>}
+              {clickedTrue ? <div className="pt-2">
+                <div class="button search-btn-class" onClick={Filter}>
+                <div className="btn btn-lg">Hide</div>
+                  </div>
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  <div class="button mr-3 search-btn-class button-grey">
+                  <div className="btn btn-lg ">Search</div>
+                  </div>  </div>:
+                  <div class="button" onClick={Filter}>
+                  <span class="button__mask"></span>
+                  <span class="button__text">
+                    <FontAwesomeIcon icon={faFilter} />
+                    &nbsp; Advanced
+                  </span>
+                  <span class="button__text button__text--bis">
+                    <FontAwesomeIcon icon={faFilter} />
+                    &nbsp; Advanced
+              </span></div>}
+             
+            
+          </fieldset>
+        </form>
+      </div>
     
-        <Footer />
-      </>
+      <div className="col-lg-4">
+        {/* <AdComponent /> */}
+        <AdSense.Google
+        client='ca-pub-2213646733957075'
+        slot='2997026131'
+        style={{ display: 'block' }}
+        format='auto'
+        responsive='true'
+        layoutKey='-gw-1+2a-9x+5c'
+      />
+    </div>
+    
+    </div>
+
+    </div>
+  </div>
+
+
+  <div className="container">
+<ul>
+
+
+
+   <Link to={{
+            pathname: "/letterwords",
+            state: {
+                letter: 2
+            }
+            
+        }} > <div className="row"><button className="btn btn-link">  <li >2 Letters Words</li></button></div></Link>
+   <Link to={{
+            pathname: "/letterwords",
+            state: {
+                letter: 3
+            }
+            
+        }} > <div className="row"><button className="btn btn-link">  <li >3 Letters Words</li></button></div></Link>
+   <Link to={{
+            pathname: "/letterwords",
+            state: {
+                letter: 4
+            }
+            
+        }} > <div className="row"><button className="btn btn-link">  <li >4 Letters Words</li></button></div></Link>
+   <Link to={{
+            pathname: "/letterwords",
+            state: {
+                letter: 5
+            }
+            
+        }} > <div className="row"><button className="btn btn-link">  <li >5 Letters Words</li></button></div></Link>
+   <Link to={{
+            pathname: "/letterwords",
+            state: {
+                letter: 6
+            }
+            
+        }} > <div className="row"><button className="btn btn-link">  <li >6 Letters Words</li></button></div></Link>
+   <Link to={{
+            pathname: "/letterwords",
+            state: {
+                letter: 7
+            }
+            
+        }} > <div className="row"><button className="btn btn-link">  <li >7 Letters Words</li></button></div></Link>
+   <Link to={{
+            pathname: "/letterwords",
+            state: {
+                letter: 8
+            }
+            
+        }} > <div className="row"><button className="btn btn-link">  <li >8 Letters Words</li></button></div></Link>
+   <Link to={{
+            pathname: "/letterwords",
+            state: {
+                letter: 9
+            }
+            
+        }} > <div className="row"><button className="btn btn-link">  <li >9 Letters Words</li></button></div></Link>
+   <div className="row"><button className="btn btn-link">  <li >2 Letter Words star K</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >3 Letter Words star L</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >2 Letter Words star M</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >5 Letter Words star N</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >4 Letter Words star O</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >6 Letter Words star P</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >2 Letter Words star Q</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >4 Letter Words star R</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >3 Letter Words star S</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >2 Letter Words star T</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >6 Letter Words star U</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >7 Letter Words star V</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >3 Letter Words star W</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >2 Letter Words star X</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >3 Letter Words star Y</li></button></div>
+   <div className="row"><button className="btn btn-link">  <li >2 Letter Words starting Z</li></button></div>
+
+
+
+
+</ul>
+</div> 
+
+
+
+  {render ? (
+   
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-12">
+          <table id="example" class="table table-hover responsive nowrap">
+            <thead class="background-thead">
+              <tr>
+                <th>Words</th>
+                <th>Scrabble</th>
+                <th>Words With Friends</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              {tempArray9.length != 0 ? (
+                tempArray9.map(item => {
+                  return (
+                    <>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="d-flex align-items-center">
+                              <div class="avatar avatar-grey mr-3">10</div>
+
+                              <div class="">
+                                <p class="font-weight-bold mb-0">{item.word}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>{item.scrabble}</td>
+                        <td>{item.wwf}</td>
+                       
+                     
+                      </tr>
+                    </>
+                  );
+                })
+              ) : (
+                  <></>
+                )}
+                
+              {tempArray8.length != 0 ? (
+                tempArray8.map(item => {
+                  return (
+                    <>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="d-flex align-items-center">
+                              <div class="avatar avatar-pink mr-3">9</div>
+
+                              <div class="">
+                                <p class="font-weight-bold mb-0">{item.word}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>{item.scrabble}</td>
+                        <td>{item.wwf}</td>
+                       
+                        
+                      </tr>
+                    </>
+                  );
+                })
+              ) : (
+                  <></>
+                )}
+              {tempArray7.length != 0 ? (
+                tempArray7.map(item => {
+                  return (
+                    <>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="d-flex align-items-center">
+                              <div class="avatar avatar-blue mr-3">8</div>
+
+                              <div class="">
+                                <p class="font-weight-bold mb-0">{item.word}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>{item.scrabble}</td>
+                        <td>{item.wwf}</td>
+                       
+                      
+                      </tr>
+                    </>
+                  );
+                })
+              ) : (
+                  <></>
+                )}
+              {tempArray6.length != 0 ? (
+                tempArray6.map(item => {
+                  return (
+                    <>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="d-flex align-items-center">
+                              <div class="avatar avatar-red mr-3">7</div>
+
+                              <div class="">
+                                <p class="font-weight-bold mb-0">{item.word}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>{item.scrabble}</td>
+                        <td>{item.wwf}</td>
+                    
+                      </tr>
+                    </>
+                  );
+                })
+              ) : (
+                  <></>
+                )}
+              {tempArray5.length != 0 ? (
+                tempArray5.map(item => {
+                  return (
+                    <>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="d-flex align-items-center">
+                              <div class="avatar avatar-orange mr-3">6</div>
+
+                              <div class="">
+                                <p class="font-weight-bold mb-0">{item.word}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>{item.scrabble}</td>
+                        <td>{item.wwf}</td>
+                      
+                      </tr>
+                    </>
+                  );
+                })
+              ) : (
+                  <></>
+                )}
+              {tempArray4.length != 0 ? (
+                tempArray4.map(item => {
+                  return (
+                    <>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="d-flex align-items-center">
+                              <div class="avatar avatar-grey mr-3">5</div>
+
+                              <div class="">
+                                <p class="font-weight-bold mb-0">{item.word}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>{item.scrabble}</td>
+                        <td>{item.wwf}</td>
+                    
+                      </tr>
+                    </>
+                  );
+                })
+              ) : (
+                  <></>
+                )}
+              {tempArray3.length != 0 ? (
+                tempArray3.map(item => {
+                  return (
+                    <>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="d-flex align-items-center">
+                              <div class="avatar avatar-brown mr-3">4</div>
+
+                              <div class="">
+                                <p class="font-weight-bold mb-0">{item.word}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>{item.scrabble}</td>
+                        <td>{item.wwf}</td>
+                       
+                  
+                      </tr>
+                    </>
+                  );
+                })
+              ) : (
+                  <></>
+                )}
+              {Array2.length != 0 ? (
+                Array2.map(item => {
+                  return (
+                    <>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="d-flex align-items-center">
+                              <div class="avatar avatar-pink mr-3">3</div>
+
+                              <div class="">
+                                <p class="font-weight-bold mb-0">{item.word}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>{item.scrabble}</td>
+                        <td>{item.wwf}</td>
+                
+                      </tr>
+                    </>
+                  );
+                })
+              ) : (
+                  <></>
+                )}
+
+              {Array1.length != 0 ? (
+                Array1.map(item => {
+                  console.log('here are the' + item)
+                  return (
+                    <>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="d-flex align-items-center">
+                              <div class="avatar avatar-blue mr-3">2</div>
+
+                              <div class="">
+                                <p class="font-weight-bold mb-0">{item.word}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>{item.scrabble}</td>
+                        <td>{item.wwf}</td>
+                       
+                
+                      </tr>
+                    </>
+                  );
+                })
+              ) : (
+                  <></>
+                )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  ) : (
+      <></>
+    )}
+
+  <Footer />
+</>
+
     );
 };
 
 export default Length;
+

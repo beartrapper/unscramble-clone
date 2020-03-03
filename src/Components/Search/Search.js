@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import AdComponent from "../Adsense/Adsense";
 import AdComponentTop from "../Adsense/AdsenseBanner";
+import AdSense from 'react-adsense';
 
 
 
@@ -70,10 +71,7 @@ const Search = () => {
       };
 
       const ActualArray = await axios.post('http://localhost:5000/api/unscramble', value);
-
-      // ActualArray = [...new Set(ActualArray)];
-      
-
+  
       console.log(ActualArray);
     
 
@@ -161,14 +159,18 @@ const Search = () => {
       setInputValue(value);
     }
   };
-
-
- 
-
   return (
     <>
           <div id="Intro" className="back-ground">
-            <AdComponentTop />
+          <AdSense.Google
+            client='ca-pub-2213646733957075'
+            slot='2997026131'
+            // style={{ display: 'block' }}
+            format='auto'
+            responsive='true'
+            layoutKey='-gw-1+2a-9x+5c'
+          />
+            {/* <AdComponentTop /> */}
             </div>
 
  <nav class="navbar navbar-expand-lg navbar-light bg-light bottom-border-nav">
@@ -308,7 +310,15 @@ const Search = () => {
           </div>
         
           <div className="col-lg-4">
-            <AdComponent />
+            {/* <AdComponent /> */}
+            <AdSense.Google
+            client='ca-pub-2213646733957075'
+            slot='2997026131'
+            style={{ display: 'block' }}
+            format='auto'
+            responsive='true'
+            layoutKey='-gw-1+2a-9x+5c'
+          />
         </div>
         
         </div>
@@ -583,6 +593,7 @@ const Search = () => {
 
       <Footer />
     </>
+  
   );
 };
 
